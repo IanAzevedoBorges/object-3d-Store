@@ -1,11 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header class="header-style">
-      <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" />
-        <q-toolbar-title>Quasar App</q-toolbar-title>
-      </q-toolbar>
-    </q-header>
+    <q-header class="header-style"> </q-header>
 
     <q-page-container :style="{ transition: 'none' }">
       <router-view />
@@ -24,42 +19,7 @@ const linksList = [
     icon: "school",
     link: "https://quasar.dev",
   },
-  {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework",
-  },
-  {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev",
-  },
-  {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
-  },
-  {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev",
-  },
-  {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev",
-  },
-  {
-    title: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev",
-  },
+  // ... (outras entradas de links)
 ];
 
 export default defineComponent({
@@ -83,9 +43,45 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 .header-style {
-  box-shadow: none; /* Remove a box shadow */
-  border-bottom: 3px solid whitesmoke; /* Adicione uma borda sólida preta ao redor do cabeçalho */
+  box-shadow: none;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.q-row {
+  display: flex;
+  align-items: center; /* Centralizar verticalmente */
+  height: 100%; /* Garantir que a linha ocupe toda a altura do cabeçalho */
+}
+
+.q-col {
+  display: flex;
+  align-items: flex-start; /* Alinhar à esquerda */
+  justify-content: center; /* Centralizar horizontalmente */
+  height: 100%; /* Garantir que a coluna ocupe toda a altura do cabeçalho */
+}
+
+.button-signin {
+  background-color: #ffc720;
+  border: none;
+  border-radius: 100px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.small-button {
+  background: transparent;
+  border: none;
+  color: #53616c;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 10pt;
+  outline: none;
+}
+
+.button-signin:hover {
+  background-color: #eeb200;
 }
 </style>

@@ -1,4 +1,4 @@
-import loginPage from "app/src/pageLogin.vue";
+import SingInPage from "app/src/pages/SingInPage.vue";
 
 const routes = [
   {
@@ -8,7 +8,7 @@ const routes = [
   },
   {
     path: "/login",
-    component: loginPage,
+    component: SingInPage,
   },
   {
     path: "/:catchAll(.*)*",
